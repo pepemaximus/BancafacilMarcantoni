@@ -45,7 +45,7 @@ body {
     background-color: white;
     background-image: none;
 }
-.header-flex {
+.header-flex { /* SE AGREGÓ GRADIENTE*/
     grid-area: header;
     border-color: none;
     border-width: 5px; border-style: none;
@@ -56,6 +56,7 @@ body {
     display: flex;
     justify-content: center;
     flex-flow: row nowrap; 
+    background-image: linear-gradient(to bottom, blue, rgb(105, 119, 197));
     /*position: relative;
     top: 25px; left: 10px;
     display: inline-block;*/   
@@ -99,6 +100,10 @@ body {
     /*top: -80px;
     right: -42%;*/
     background-color: antiquewhite;
+    animation-name: animacionMenu;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: 4;
 }
 .nav {
     padding: 5px;
@@ -142,14 +147,21 @@ h1
     flex-wrap: wrap;
     align-items: center;
 }
+.landing-text:hover { /* ESTA ES LA ANIMACION DEL LANDING TEXT DENTRO DEL CUADRO DE INDEX.HTML, CAMBIA DE COLOR AL POSAR EL MOUSE*/
+background-color: #2ACAD0;
+}
 .topnav {
-    /*position: absolute;*/ 
     border: 1px solid black;
-    /*top: 10px;
-    right: 1px;*/
-    background-color: antiquewhite;
     display: flex;
     justify-content: flex-end;
+    background-color: antiquewhite;
+}
+@keyframes animacionMenu { /* ESTA ES LA ANIMACION DEL MENÚ*/
+    0%   {background-color: antiquewhite;}
+    25%  {background-color: rgb(7, 19, 92);}
+    50%  {background-color: rgb(11, 199, 206);}
+    100% {background-color: rgb(148, 156, 255);}
+  }
 }
 .imagenContexto {
     position: relative;
